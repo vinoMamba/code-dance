@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="src/favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Code Dance</title>
+</head>
+<body>
+<div class="container">
+    <div class="buttons">
+        <button id="reduceBtn">减速</button>
+        <button id="toggleBtn">暂停</button>
+        <button id="quickBtn">加速</button>
+    </div>
+    <div class="code" id="code">
+    </div>
+    <div class="display">
+        <div class="airplane">
+            <div class="top"></div>
+            <div class="header">
+                <div class="windshield">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+            <div class="bodyLeft">
+                <div class="box1">
+                    <div class="box2">
+                        <div class="box3"></div>
+                    </div>
+                </div>
+                <div class="box1 box1-small">
+                    <div class="box2 box2-small">
+                        <div class="box3 box3-small"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyRight">
+                <div class="box1">
+                    <div class="box2">
+                        <div class="box3"></div>
+                    </div>
+                </div>
+                <div class="box1 box1-small">
+                    <div class="box2 box2-small">
+                        <div class="box3 box3-small"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerLeft"></div>
+            <div class="footerRight"></div>
+        </div>
+        <div class="road"></div>
+    </div>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
 </html>
