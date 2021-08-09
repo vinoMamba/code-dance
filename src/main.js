@@ -1,6 +1,7 @@
 import "./style.css"
-import string1 from "./pcStyle";
-import string2 from "./mobileStyle";
+import pcStyle from "./pcStyle";
+import mobileStyle from "./mobileStyle";
+import html from "./html";
 
 class Player {
     id = undefined
@@ -10,10 +11,12 @@ class Player {
     flag = false
     ui = {
         code: document.querySelector('#code'),
-        style: document.head.appendChild(document.createElement("style"))
+        style: document.head.appendChild(document.createElement("style")),
+        container: document.querySelector("#display")
     }
 
     init() {
+        this.ui.container.innerHTML = html
         this.play()
         this.bindEvents()
     }
@@ -39,7 +42,7 @@ class Player {
                 window.clearInterval(this.id)
             } else {
                 this.n += 1
-                this.string = (document.body.clientWidth < 500 ? string2 : string1)
+                this.string = (document.body.clientWidth < 500 ? mobileStyle : pcStyle)
                 this.ui.code.innerText = this.string.substring(0, this.n)
                 this.ui.style.innerHTML = this.string.substring(0, this.n)
                 this.ui.code.scrollTop = this.ui.code.scrollHeight
